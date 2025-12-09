@@ -18,6 +18,7 @@ model User {
   email String  @unique
   name  String?
   posts Post[]
+  access Int //Here we will regulate admin and student status
 }
 
 model Post {
@@ -28,3 +29,26 @@ model Post {
   author    User    @relation(fields: [authorId], references: [id])
   authorId  Int
 }
+model Module {
+  id Int @id @default(autoincrement())
+  title String
+  topics Topic[]
+}
+model Topic {
+  id Int @id @default(autoincrement())
+  module Module @relation(fields: [moduleId], references: [id])
+  moduleId Int
+  title String
+  content String?
+  videolink String?
+  practices Practice[]
+}
+
+model Practice {
+  id Int @id @default(autoincrement())
+  topic Topic @relation(fields: [topicId], references: [id])
+  topicId Int
+  content String?
+}
+
+//How will we store presentations?
