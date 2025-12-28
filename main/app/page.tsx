@@ -1,25 +1,34 @@
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from "@tanstack/react-query";
-import getQueryClient from "./getQueryClient";
+import Navbar from "@/components/home/Navbar";
+import Image from "next/image";
+import person1 from "@/assets/images/boy1.jpg";
+import person2 from "@/assets/images/boy2.jpg";
+import person3 from "@/assets/images/girl2.jpg";
+import arrow from "@/assets/images/curvyarrow.svg";
+import Link from "next/link";
+import { MoveUpRight } from "lucide-react";
+import Hero from "@/components/home/Hero";
+import Stats from "@/components/home/Stats";
+import Modules from "@/components/home/Modules";
+import Info from "@/components/home/Info";
+import Info2 from "@/components/home/Info2";
+import ReviewsSlider from "@/components/home/ReviewsSlider";
+import Action from "@/components/home/Action";
+import FAQ from "@/components/home/FAQ";
+// import NewsBar from "@/components/NewsBar";
 
-export default async function Page() {
-  const queryClient = getQueryClient();
-
-  await queryClient.prefetchQuery({
-    queryKey: ["posts"],
-    queryFn: async () => "data",
-  });
-
+export default function Home() {
   return (
-    <HydrationBoundary state={dehydrate(queryClient)}>
-      <div className="min-h-screen flex items-center justify-center bg-neutral-50">
-        <h2 className="font-mont text-3xl text-gray-800 font-semibold mb-8">
-          Prefetching in a Server Component with TanStack Query
-        </h2>
-      </div>
-    </HydrationBoundary>
+    <div className="min-h-screen w-full font-geist">
+      <Navbar />
+      <main className="flex flex-col my-9 gap-14 lg:gap-25">
+        <Hero />
+        <Info />
+        <Modules />
+        <Info2 />
+        <ReviewsSlider />
+        <Action />
+        <FAQ />
+      </main>
+    </div>
   );
 }

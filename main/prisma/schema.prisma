@@ -29,6 +29,7 @@ model Post {
   author    User    @relation(fields: [authorId], references: [id])
   authorId  Int
 }
+<<<<<<< HEAD
 model Module {
   id Int @id @default(autoincrement())
   title String
@@ -52,3 +53,5 @@ model Practice {
 }
 
 //How will we store presentations?
+=======
+>>>>>>> 91d8310 (ui changes)
