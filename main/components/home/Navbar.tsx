@@ -7,10 +7,10 @@ import { useState } from "react";
 export default function Navbar() {
   const [pressed, setPressed] = useState(false);
   return (
-    <nav className="w-full bg-white font-geist border-b-[1.5px] border-b-neutral-200/80">
-      <div className="w-full flex items-center justify-between px-6 pr-4 py-3 lg:py-4 max-w-[1200px] lg:mx-auto">
+    <nav className="w-full bg-white font-geist border-b-[1.5px] border-b-neutral-200/80 sticky top-0 z-50">
+      <div className="w-full flex items-center justify-between px-6 pr-4 py-3 lg:py-4 max-w-[1230px] lg:mx-auto">
         <Link className="flex flex-col select-none" href={"/"}>
-          <h2 className="font-bold text-3xl text-emerald-600/80 text-pretty">
+          <h2 className="font-bold text-2xl lg:text-3xl text-emerald-600/80 text-pretty">
             OquEasy
           </h2>
           <p className="text-xs font-medium text-neutral-600 self-start pl-2">
@@ -35,12 +35,6 @@ export default function Navbar() {
             href={"#"}
           >
             Contact
-          </Link>
-          <Link
-            className="px-4 py-2 transition-colors hover:text-emerald-600"
-            href={"#"}
-          >
-            Log In
           </Link>
           <Link
             className="px-4 py-2 transition-colors hover:text-emerald-600"

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export default function Action() {
   return (
-    <section className="w-full px-6 pb-4 lg:pt-8 lg:pb-12 font-geist">
+    <section className="w-full px-6 pb-6 lg:pt-8 lg:pb-12 font-geist">
       <div className="grid grid-cols-1 lg:grid-cols-[0.23fr_0.54fr_0.23fr] max-h-130 max-w-[1200px] mx-auto p-7 lg:p-13 lg:rounded-3xl lg:gap-12 rounded-2xl bg-emerald-200/72">
         <div className="hidden lg:flex lg:flex-col lg:items-start lg:gap-0">
           {actionPeople.slice(0, 5).map((item, index) => {

@@ -35,13 +35,13 @@ export default function Info() {
             className="w-full min-h-104 object-cover rounded-lg shadow-lg"
           />
           <div className="absolute top-0 -left-20 flex flex-col gap-3 items-end">
-            <p className="text-xs px-3 py-2 rounded-sm bg-emerald-300 shadow-lg text-neutral-800 font-medium">
+            <p className="text-xs px-3 py-2 rounded-sm bg-emerald-300 shadow-md text-neutral-800 font-medium">
               Observe the Course
             </p>
-            <p className="text-xs px-3 py-2 rounded-sm bg-emerald-300 shadow-lg text-neutral-800 font-medium">
+            <p className="text-xs px-3 py-2 rounded-sm bg-emerald-300 shadow-md text-neutral-800 font-medium">
               Track Progress
             </p>
-            <p className="text-xs px-3 py-2 rounded-sm bg-emerald-300 shadow-lg text-neutral-800 font-medium">
+            <p className="text-xs px-3 py-2 rounded-sm bg-emerald-300 shadow-md text-neutral-800 font-medium">
               Solve Tasks
             </p>
           </div>

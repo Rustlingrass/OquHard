@@ -14,13 +14,14 @@ import Info2 from "@/components/home/Info2";
 import ReviewsSlider from "@/components/home/ReviewsSlider";
 import Action from "@/components/home/Action";
 import FAQ from "@/components/home/FAQ";
+import Footer from "@/components/home/Footer";
 // import NewsBar from "@/components/NewsBar";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full font-geist">
       <Navbar />
-      <main className="flex flex-col my-9 gap-14 lg:gap-25">
+      <main className="flex flex-col my-9 lg:my-10 gap-14 lg:gap-25">
         <Hero />
         <Info />
         <Modules />
@@ -29,6 +30,7 @@ export default function Home() {
         <Action />
         <FAQ />
       </main>
+      <Footer />
     </div>
   );
 }
