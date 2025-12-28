@@ -15,6 +15,7 @@ import ReviewsSlider from "@/components/home/ReviewsSlider";
 import Action from "@/components/home/Action";
 import FAQ from "@/components/home/FAQ";
 import Footer from "@/components/home/Footer";
+import AuthDialog from "@/components/auth/AuthDialog";
 // import NewsBar from "@/components/NewsBar";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
     <div className="min-h-screen w-full font-geist">
       <Navbar />
       <main className="flex flex-col my-9 lg:my-10 gap-14 lg:gap-25">
+        <AuthDialog />
         <Hero />
         <Info />
         <Modules />
