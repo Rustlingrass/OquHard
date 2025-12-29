@@ -5,14 +5,14 @@ import { Menu, TextAlignJustify, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function CourseNavbar() {
   const [pressed, setPressed] = useState(false);
   const setAuthDialogOpen = useAuthDialogStore(
     (state) => state.setAuthDialogOpen
   );
   return (
     <nav className="w-full bg-white font-geist border-b-[1.5px] border-b-neutral-200/80 sticky top-0 z-50">
-      <div className="w-full flex items-center justify-between px-6 pr-4 py-3 lg:py-4 max-w-[1230px] lg:mx-auto">
+      <div className="w-full flex items-center justify-between px-6 pr-6 py-3 lg:py-4 max-w-7xl lg:mx-auto">
         <Link className="flex flex-col select-none" href={"/"}>
           <h2 className="font-bold text-2xl lg:text-3xl text-emerald-600/80 text-pretty">
             OquEasy

@@ -8,7 +8,7 @@ export default function LogInDialogContent() {
   return (
     <main className="p-2 flex flex-col gap-6">
       <button className="w-full cursor-pointer flex items-center justify-center px-4 py-2 sm:py-2.5 sm:gap-2 gap-1.5 rounded-md border-2 border-neutral-200 hover:border-neutral-300 active:border-neutral-300 transition-colors">
-        <Image src={google} alt="google" className="size-6" />
+        <Image src={google} alt="google" className="size-5.5 lg:size-6" />
         <h3 className="text-sm font-medium text-neutral-800">Google</h3>
       </button>
       <div className="flex items-center gap-1">
@@ -37,7 +37,7 @@ export default function LogInDialogContent() {
             className=" focus-within:outline-0 placeholder:text-base w-full focus-within:border-neutral-300 focus-within:bg-neutral-50 px-4 py-2 rounded-md border border-neutral-200 hover:border-neutral-300 active:border-neutral-300 text-sm font-normal text-neutral-800 transition-colors"
           />
         </div>
-        <div className="flex flex-col w-full gap-4 mt-8 lg:mt-12 sticky">
+        <div className="flex flex-col w-full gap-4 mt-10 lg:mt-12 sticky">
           <button
             type="submit"
             className="w-full flex items-center gap-1.5 lg:gap-2 justify-center rounded-md px-4 py-2.5 lg:py-2.5 text-xs lg:text-sm font-medium bg-emerald-500 hover:bg-emerald-500/90 active:bg-emerald-500/90 transition-colors text-white cursor-pointer"

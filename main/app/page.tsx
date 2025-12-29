@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full font-geist">
       <Navbar />
-      <main className="flex flex-col my-9 lg:my-10 gap-14 lg:gap-25">
+      <main className="flex flex-col my-8 gap-14 lg:gap-25">
         <AuthDialog />
         <Hero />
         <Info />

@@ -15,7 +15,7 @@ import { useState } from "react";
 export default function FAQ() {
   return (
     <section className="w-full px-6 font-geist">
-      <div className="space-y-8 lg:space-y-14 max-w-[1200px] mx-auto">
+      <div className="space-y-8 lg:space-y-18 max-w-[1200px] mx-auto">
         <header className="flex flex-col items-start lg:items-center lg:text-center gap-4 lg:gap-6">
           <p className="text-xs font-normal bg-emerald-300/70 text-emerald-900 rounded-sm p-2 flex items-center gap-1.5">
             <Star className="size-4 fill-emerald-900 text-emerald-900" />
@@ -47,7 +47,7 @@ export default function FAQ() {
             </Link>
           </div>
         </header>
-        <main className="space-y-2 lg:space-y-4 lg:max-w-6/7 lg:mx-auto">
+        <main className="space-y-2 lg:space-y-4 lg:max-w-7/8 lg:mx-auto">
           {faqs.map((item, index) => (
             <FAQItem key={index} item={item} />
           ))}
@@ -85,7 +85,7 @@ function FAQItem({ item }: { item: { question: string; answer: string } }) {
           open && "grid-rows-[1fr] mt-3 lg:mt-3"
         )}
       >
-        <p className="text-xs lg:text-sm lg:font-medium font-normal text-neutral-600 text-pretty overflow-hidden">
+        <p className="text-xs lg:text-base lg:font-medium font-normal text-neutral-600 lg:text-neutral-500 text-pretty overflow-hidden">
           {item.answer}
         </p>
       </div>

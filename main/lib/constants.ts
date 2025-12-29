@@ -199,3 +199,162 @@ export const actionPeople = [
   review5,
   boy1,
 ];
+
+export const courseSections = [
+  {
+    title: "Section 1 — Introduction to DSA & C++",
+    chapters: [
+      { title: "Course overview and setup (C++ toolchain)", readTime: "6 min", done: true },
+      { title: "Basic C++ syntax refresher", readTime: "8 min", done: true },
+      { title: "Variables, types and I/O in C++", readTime: "7 min", done: true },
+      { title: "Control flow: loops and conditionals", readTime: "6 min", done: false },
+      { title: "Basic problem-solving patterns", readTime: "10 min", done: false },
+    ],
+    questions: [
+      { text: "What are the essential tools to set up a C++ competitive environment?", done: false },
+      { text: "How do you read input and write output efficiently in C++?", done: false },
+    ],
+  },
+  {
+    title: "Section 2 — Arrays & Strings",
+    chapters: [
+      { title: "Static and dynamic arrays", readTime: "8 min", done: true },
+      { title: "Two-pointer technique", readTime: "7 min", done: true },
+      { title: "Common string operations", readTime: "9 min", done: false },
+      { title: "Sliding window patterns", readTime: "8 min", done: false },
+      {
+        title: "Practice problems: subarrays and substrings",
+        readTime: "12 min",
+        done: false,
+      },
+      { title: "Memory layout and performance tips", readTime: "6 min", done: false },
+    ],
+    questions: [
+      { text: "When is the two-pointer technique useful?", done: false },
+      { text: "How do sliding windows reduce complexity for subarray problems?", done: false },
+    ],
+  },
+  {
+    title: "Section 3 — Linked Lists",
+    chapters: [
+      { title: "Singly and doubly linked lists", readTime: "7 min", done: false },
+      { title: "Pointer manipulation and pitfalls", readTime: "9 min", done: false },
+      {
+        title: "Common operations: reverse, merge, detect cycle",
+        readTime: "10 min",
+        done: false,
+      },
+      { title: "Memory management in C++ (new/delete)", readTime: "8 min", done: false },
+      { title: "Practice problems and edge cases", readTime: "11 min", done: false },
+    ],
+    questions: [
+      { text: "How do you detect a cycle in a linked list?", done: false },
+      { text: "Why are pointers trickier in linked list manipulations?", done: false },
+    ],
+  },
+  {
+    title: "Section 4 — Stacks, Queues & Deques",
+    chapters: [
+      {
+        title: "Stack ADT and application (DFS, parentheses)",
+        readTime: "7 min",
+        done: false,
+      },
+      { title: "Queue ADT and BFS fundamentals", readTime: "7 min", done: false },
+      { title: "Double-ended queues and sliding window", readTime: "8 min", done: false },
+      { title: "Implementations using STL containers", readTime: "6 min", done: false },
+      {
+        title: "Practice problems: monotonic stacks/queues",
+        readTime: "10 min",
+        done: false,
+      },
+    ],
+    questions: [
+      { text: "When is a deque preferred over a queue?", done: false },
+      { text: "Give an example use-case for monotonic stack.", done: false },
+    ],
+  },
+  {
+    title: "Section 5 — Trees & Binary Trees",
+    chapters: [
+      { title: "Tree terminology and representations", readTime: "8 min", done: false },
+      { title: "Binary trees and traversals (DFS/BFS)", readTime: "9 min", done: false },
+      { title: "Binary search trees (BST) basics", readTime: "10 min", done: false },
+      { title: "Balanced trees overview (AVL, RB)", readTime: "11 min", done: false },
+      {
+        title: "Practice: lowest common ancestor & tree DP",
+        readTime: "12 min",
+        done: false,
+      },
+    ],
+    questions: [
+      { text: "What is the difference between a binary tree and a BST?", done: false },
+      { text: "How does tree height affect complexity of operations?", done: false },
+    ],
+  },
+  {
+    title: "Section 6 — Graphs & Traversals",
+    chapters: [
+      {
+        title: "Graph representations: adjacency list/matrix",
+        readTime: "8 min",
+        done: false,
+      },
+      {
+        title: "BFS and shortest paths in unweighted graphs",
+        readTime: "9 min",
+        done: false,
+      },
+      {
+        title: "DFS, backtracking and connected components",
+        readTime: "8 min",
+        done: false,
+      },
+      { title: "Dijkstra and shortest paths (weighted)", readTime: "12 min", done: false },
+      { title: "Topological sort and DAGs", readTime: "9 min", done: false },
+      { title: "Practice problems: cycles and bridges", readTime: "12 min", done: false },
+    ],
+    questions: [
+      { text: "When should you use adjacency list vs matrix?", done: false },
+      { text: "What is the purpose of topological sorting?", done: false },
+    ],
+  },
+  {
+    title: "Section 7 — Sorting, Searching & Complexity",
+    chapters: [
+      { title: "Complexity analysis and Big-O notation", readTime: "8 min", done: false },
+      { title: "Basic sorts: selection, insertion, bubble", readTime: "7 min", done: false },
+      { title: "Efficient sorts: merge sort, quicksort", readTime: "10 min", done: false },
+      { title: "Binary search and search patterns", readTime: "8 min", done: false },
+      { title: "Lower/upper bound and STL utilities", readTime: "7 min", done: false },
+      { title: "Practice: sorting-related problems", readTime: "11 min", done: false },
+    ],
+    questions: [
+      { text: "Why is quicksort average-case fast but worst-case bad?", done: false },
+      { text: "How does binary search apply to non-sorted problems?", done: false },
+    ],
+  },
+  {
+    title: "Section 8 — Dynamic Programming & Problem Solving",
+    chapters: [
+      {
+        title: "DP fundamentals: memoization vs tabulation",
+        readTime: "9 min",
+        done: false,
+      },
+      { title: "0/1 Knapsack and common DP patterns", readTime: "11 min", done: false },
+      { title: "DP on sequences: LIS and edit distance", readTime: "12 min", done: false },
+      { title: "Greedy vs DP: when to choose which", readTime: "8 min", done: false },
+      { title: "Practice contest: timed problem set", readTime: "15 min", done: false },
+      {
+        title: "Capstone: end-to-end problem solving strategy",
+        readTime: "10 min",
+        done: false,
+      },
+    ],
+    questions: [
+      { text: "How do you decide the state and transition for a DP solution?", done: false },
+      { text: "Give an example where greedy fails but DP succeeds.", done: false },
+    ],
+  },
+];

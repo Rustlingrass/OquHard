@@ -8,8 +8,8 @@ import { MoveUpRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="w-full px-6 py-2 lg:py-10">
-      <div className="lg:grid lg:grid-cols-[0.55fr_0.5fr] lg:items-end lg:gap-8 max-w-[1200px] lg:mx-auto lg:pl-4">
+    <section className="w-full px-6 py-2 lg:py-9">
+      <div className="lg:grid lg:grid-cols-[0.55fr_0.5fr] lg:items-center lg:gap-8 max-w-[1200px] lg:mx-auto lg:pl-4">
         <div className="flex flex-col gap-4 items-stretch">
           {/* <div className="w-full flex justify-center">
             <Image
@@ -75,7 +75,7 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-          <div className="flex justify-start items-center gap-8 lg:gap-14 mt-4 lg:mt-6">
+          <div className="flex justify-start items-center gap-8 lg:gap-14 mt-4 lg:mt-8">
             <div className="space-y-1 lg:space-y-2">
               <h2 className="text-3xl lg:text-4xl font-semibold text-gray-800">
                 20+
@@ -105,7 +105,7 @@ export default function Hero() {
         <Image
           src={posing}
           alt="girl posing"
-          className="flex-1/2 lg:scale-115 h-120 hidden lg:block object-contain"
+          className="flex-1/2 lg:scale-115 h-120 lg:mt-6 lg:ml-4 hidden lg:block object-contain"
         />
       </div>
     </section>
