@@ -1,6 +1,6 @@
 export default function ProfileUserInfo() {
   return (
-    <section className="p-6 space-y-5 bg-linear-to-br from-stone-100/80 via-gray-100 to-slate-100 rounded-md">
+    <section className="p-6 lg:p-7 space-y-5 bg-linear-to-br from-stone-100/80 via-gray-100 to-slate-100 rounded-md">
       <h3 className="text-base font-semibold text-neutral-800">
         User Information
       </h3>

@@ -241,7 +241,7 @@ function AcitivityFilters() {
 
 export default function ProfileActivity() {
   return (
-    <section className="space-y-6 lg:space-y-8 mt-6 lg:mt-16">
+    <section className="space-y-6 lg:space-y-8 mt-10 lg:mt-16">
       <div className="lg:space-y-1">
         <h2 className="text-xl lg:text-2xl font-semibold text-neutral-800">
           My progress

@@ -38,7 +38,7 @@ function PointsCard() {
 
 export default function ProfileCourseProgress() {
   return (
-    <section className="rounded-md bg-linear-to-br from-stone-50 via-gray-100 to-slate-100 p-7 flex flex-col gap-6">
+    <section className="rounded-md lg:rounded-lg bg-linear-to-br from-stone-50 via-gray-100 to-slate-100 p-7 lg:p-8 flex flex-col gap-6">
       <div className="flex items-start lg:items-center justify-between gap-6 lg:gap-10">
         <div className="flex flex-col items-start gap-2 lg:gap-3">
           <h3 className="text-sm lg:text-base lg:font-semibold font-medium text-neutral-800">
