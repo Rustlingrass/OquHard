@@ -23,7 +23,7 @@ export default function AsideContent({
         <button
           onClick={toggleSidebar}
           className={cn(
-            "ml-auto p-1.5 rounded-sm flex items-center justify-center bg-neutral-50 hover:bg-neutral-100 active:bg-neutral-100 transition-colors",
+            " p-1.5 rounded-sm flex items-center justify-center bg-neutral-50 hover:bg-neutral-100 active:bg-neutral-100 transition-colors",
             open && "lg:hidden"
           )}
         >
