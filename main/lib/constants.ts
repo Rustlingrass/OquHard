@@ -15,6 +15,7 @@ import boy1 from "@/assets/images/boy1.jpg";
 import boy2 from "@/assets/images/boy2.jpg";
 import girl1 from "@/assets/images/girl1.jpg";
 import girl2 from "@/assets/images/girl2.jpg";
+import { Comment } from "./types";
 
 export const modules = [
   {
@@ -200,23 +201,209 @@ export const actionPeople = [
   boy1,
 ];
 
+export const discussionData: Comment[] = [
+  {
+    id: "1",
+    author: "Dr. Sarah Johnson",
+    userType: "teacher",
+    avatar: "SJ",
+    timestamp: "2 hours ago",
+    content:
+      "Great question about Nielsen's heuristics! Remember that consistency is key - users shouldn't have to wonder whether different words, situations, or actions mean the same thing.",
+    sectionId: "intro",
+    likes: 12,
+    replies: 3,
+    replyList: [
+      {
+        id: "1-1",
+        author: "Emma Wilson",
+        userType: "student",
+        avatar: "EW",
+        timestamp: "1 hour ago",
+        content: "Thank you! This helps clarify the consistency principle.",
+        likes: 4,
+      },
+      {
+        id: "1-2",
+        author: "Mike Chen",
+        userType: "moderator",
+        avatar: "MC",
+        timestamp: "1 hour ago",
+        content: "Great explanation, Dr. Johnson!",
+        likes: 2,
+      },
+      {
+        id: "1-3",
+        author: "Tom Anderson",
+        userType: "student",
+        avatar: "TA",
+        timestamp: "45 minutes ago",
+        content:
+          "Could you provide an example of inconsistency in popular apps?",
+        likes: 6,
+      },
+    ],
+  },
+  {
+    id: "2",
+    author: "Mike Chen",
+    userType: "moderator",
+    avatar: "MC",
+    timestamp: "4 hours ago",
+    content:
+      "Please keep discussions focused on the course material. Off-topic comments will be removed. Feel free to use the general forum for other questions!",
+    sectionId: "sec1",
+    likes: 5,
+    replies: 0,
+  },
+  {
+    id: "3",
+    author: "Emma Wilson",
+    userType: "student",
+    avatar: "EW",
+    timestamp: "5 hours ago",
+    content:
+      "I'm having trouble understanding how to apply the visibility of system status principle in mobile apps. Can anyone share examples?",
+    sectionId: "sec1",
+    chapterId: "ch1",
+    likes: 8,
+    replies: 5,
+    replyList: [
+      {
+        id: "3-1",
+        author: "Dr. Sarah Johnson",
+        userType: "teacher",
+        avatar: "SJ",
+        timestamp: "4 hours ago",
+        content:
+          "Good question! Think of loading indicators, progress bars, or the 'typing...' indicator in messaging apps. These all show system status.",
+        likes: 12,
+      },
+      {
+        id: "3-2",
+        author: "Alex Kumar",
+        userType: "student",
+        avatar: "AK",
+        timestamp: "3 hours ago",
+        content:
+          "The pull-to-refresh animation is also a great example of this!",
+        likes: 5,
+      },
+      {
+        id: "3-3",
+        author: "Jessica Martinez",
+        userType: "moderator",
+        avatar: "JM",
+        timestamp: "3 hours ago",
+        content: "Check out the resources section for more mobile UI examples!",
+        likes: 3,
+      },
+    ],
+  },
+  {
+    id: "4",
+    author: "Dr. Sarah Johnson",
+    userType: "teacher",
+    avatar: "SJ",
+    timestamp: "6 hours ago",
+    content:
+      "This week's assignment: Complete a heuristic evaluation of your favorite mobile app. Focus on at least 5 of Nielsen's principles and document your findings with screenshots.",
+    sectionId: "sec2",
+    likes: 24,
+    replies: 12,
+  },
+  {
+    id: "5",
+    author: "Alex Kumar",
+    userType: "student",
+    avatar: "AK",
+    timestamp: "1 day ago",
+    content:
+      "The cognitive walkthrough technique is fascinating! Has anyone tried combining it with eye-tracking studies?",
+    sectionId: "sec4",
+    chapterId: "ch1",
+    likes: 6,
+    replies: 2,
+    replyList: [
+      {
+        id: "5-1",
+        author: "Dr. Sarah Johnson",
+        userType: "teacher",
+        avatar: "SJ",
+        timestamp: "20 hours ago",
+        content:
+          "Excellent thinking! Yes, combining both methods can provide deeper insights into user behavior patterns.",
+        likes: 8,
+      },
+    ],
+  },
+  {
+    id: "6",
+    author: "Jessica Martinez",
+    userType: "moderator",
+    avatar: "JM",
+    timestamp: "1 day ago",
+    content:
+      "Reminder: The midterm project submissions are due next Friday. Make sure to follow the rubric provided in Section 3.",
+    sectionId: "sec3",
+    likes: 15,
+    replies: 1,
+  },
+  {
+    id: "7",
+    author: "Tom Anderson",
+    userType: "student",
+    avatar: "TA",
+    timestamp: "2 days ago",
+    content:
+      "Could someone explain the difference between heuristic evaluation and usability testing? I keep mixing them up.",
+    sectionId: "sec2",
+    likes: 11,
+    replies: 7,
+  },
+];
+
 export const courseSections = [
   {
     title: "Section 1 — Introduction to DSA & C++",
+    readTime: "37 min",
     chapters: [
-      { title: "Course overview and setup (C++ toolchain)", readTime: "6 min", done: true },
+      {
+        title: "Course overview and setup (C++ toolchain)",
+        readTime: "6 min",
+        done: true,
+      },
       { title: "Basic C++ syntax refresher", readTime: "8 min", done: true },
-      { title: "Variables, types and I/O in C++", readTime: "7 min", done: true },
-      { title: "Control flow: loops and conditionals", readTime: "6 min", done: false },
-      { title: "Basic problem-solving patterns", readTime: "10 min", done: false },
+      {
+        title: "Variables, types and I/O in C++",
+        readTime: "7 min",
+        done: true,
+      },
+      {
+        title: "Control flow: loops and conditionals",
+        readTime: "6 min",
+        done: true,
+      },
+      {
+        title: "Basic problem-solving patterns",
+        readTime: "10 min",
+        done: true,
+      },
     ],
     questions: [
-      { text: "What are the essential tools to set up a C++ competitive environment?", done: false },
-      { text: "How do you read input and write output efficiently in C++?", done: false },
+      {
+        text: "What are the essential tools to set up a C++ competitive environment?",
+        done: true,
+      },
+      {
+        text: "How do you read input and write output efficiently in C++?",
+        done: true,
+      },
     ],
   },
   {
     title: "Section 2 — Arrays & Strings",
+    readTime: "50 min",
     chapters: [
       { title: "Static and dynamic arrays", readTime: "8 min", done: true },
       { title: "Two-pointer technique", readTime: "7 min", done: true },
@@ -227,42 +414,82 @@ export const courseSections = [
         readTime: "12 min",
         done: false,
       },
-      { title: "Memory layout and performance tips", readTime: "6 min", done: false },
+      {
+        title: "Memory layout and performance tips",
+        readTime: "6 min",
+        done: false,
+      },
     ],
     questions: [
       { text: "When is the two-pointer technique useful?", done: false },
-      { text: "How do sliding windows reduce complexity for subarray problems?", done: false },
+      {
+        text: "How do sliding windows reduce complexity for subarray problems?",
+        done: false,
+      },
     ],
   },
   {
     title: "Section 3 — Linked Lists",
+    readTime: "45 min",
     chapters: [
-      { title: "Singly and doubly linked lists", readTime: "7 min", done: false },
-      { title: "Pointer manipulation and pitfalls", readTime: "9 min", done: false },
+      {
+        title: "Singly and doubly linked lists",
+        readTime: "7 min",
+        done: false,
+      },
+      {
+        title: "Pointer manipulation and pitfalls",
+        readTime: "9 min",
+        done: false,
+      },
       {
         title: "Common operations: reverse, merge, detect cycle",
         readTime: "10 min",
         done: false,
       },
-      { title: "Memory management in C++ (new/delete)", readTime: "8 min", done: false },
-      { title: "Practice problems and edge cases", readTime: "11 min", done: false },
+      {
+        title: "Memory management in C++ (new/delete)",
+        readTime: "8 min",
+        done: false,
+      },
+      {
+        title: "Practice problems and edge cases",
+        readTime: "11 min",
+        done: false,
+      },
     ],
     questions: [
       { text: "How do you detect a cycle in a linked list?", done: false },
-      { text: "Why are pointers trickier in linked list manipulations?", done: false },
+      {
+        text: "Why are pointers trickier in linked list manipulations?",
+        done: false,
+      },
     ],
   },
   {
     title: "Section 4 — Stacks, Queues & Deques",
+    readTime: "38 min",
     chapters: [
       {
         title: "Stack ADT and application (DFS, parentheses)",
         readTime: "7 min",
         done: false,
       },
-      { title: "Queue ADT and BFS fundamentals", readTime: "7 min", done: false },
-      { title: "Double-ended queues and sliding window", readTime: "8 min", done: false },
-      { title: "Implementations using STL containers", readTime: "6 min", done: false },
+      {
+        title: "Queue ADT and BFS fundamentals",
+        readTime: "7 min",
+        done: false,
+      },
+      {
+        title: "Double-ended queues and sliding window",
+        readTime: "8 min",
+        done: false,
+      },
+      {
+        title: "Implementations using STL containers",
+        readTime: "6 min",
+        done: false,
+      },
       {
         title: "Practice problems: monotonic stacks/queues",
         readTime: "10 min",
@@ -276,11 +503,28 @@ export const courseSections = [
   },
   {
     title: "Section 5 — Trees & Binary Trees",
+    readTime: "50 min",
     chapters: [
-      { title: "Tree terminology and representations", readTime: "8 min", done: false },
-      { title: "Binary trees and traversals (DFS/BFS)", readTime: "9 min", done: false },
-      { title: "Binary search trees (BST) basics", readTime: "10 min", done: false },
-      { title: "Balanced trees overview (AVL, RB)", readTime: "11 min", done: false },
+      {
+        title: "Tree terminology and representations",
+        readTime: "8 min",
+        done: false,
+      },
+      {
+        title: "Binary trees and traversals (DFS/BFS)",
+        readTime: "9 min",
+        done: false,
+      },
+      {
+        title: "Binary search trees (BST) basics",
+        readTime: "10 min",
+        done: false,
+      },
+      {
+        title: "Balanced trees overview (AVL, RB)",
+        readTime: "11 min",
+        done: false,
+      },
       {
         title: "Practice: lowest common ancestor & tree DP",
         readTime: "12 min",
@@ -288,12 +532,19 @@ export const courseSections = [
       },
     ],
     questions: [
-      { text: "What is the difference between a binary tree and a BST?", done: false },
-      { text: "How does tree height affect complexity of operations?", done: false },
+      {
+        text: "What is the difference between a binary tree and a BST?",
+        done: false,
+      },
+      {
+        text: "How does tree height affect complexity of operations?",
+        done: false,
+      },
     ],
   },
   {
     title: "Section 6 — Graphs & Traversals",
+    readTime: "58 min",
     chapters: [
       {
         title: "Graph representations: adjacency list/matrix",
@@ -310,9 +561,17 @@ export const courseSections = [
         readTime: "8 min",
         done: false,
       },
-      { title: "Dijkstra and shortest paths (weighted)", readTime: "12 min", done: false },
+      {
+        title: "Dijkstra and shortest paths (weighted)",
+        readTime: "12 min",
+        done: false,
+      },
       { title: "Topological sort and DAGs", readTime: "9 min", done: false },
-      { title: "Practice problems: cycles and bridges", readTime: "12 min", done: false },
+      {
+        title: "Practice problems: cycles and bridges",
+        readTime: "12 min",
+        done: false,
+      },
     ],
     questions: [
       { text: "When should you use adjacency list vs matrix?", done: false },
@@ -321,31 +580,79 @@ export const courseSections = [
   },
   {
     title: "Section 7 — Sorting, Searching & Complexity",
+    readTime: "51 min",
     chapters: [
-      { title: "Complexity analysis and Big-O notation", readTime: "8 min", done: false },
-      { title: "Basic sorts: selection, insertion, bubble", readTime: "7 min", done: false },
-      { title: "Efficient sorts: merge sort, quicksort", readTime: "10 min", done: false },
-      { title: "Binary search and search patterns", readTime: "8 min", done: false },
-      { title: "Lower/upper bound and STL utilities", readTime: "7 min", done: false },
-      { title: "Practice: sorting-related problems", readTime: "11 min", done: false },
+      {
+        title: "Complexity analysis and Big-O notation",
+        readTime: "8 min",
+        done: false,
+      },
+      {
+        title: "Basic sorts: selection, insertion, bubble",
+        readTime: "7 min",
+        done: false,
+      },
+      {
+        title: "Efficient sorts: merge sort, quicksort",
+        readTime: "10 min",
+        done: false,
+      },
+      {
+        title: "Binary search and search patterns",
+        readTime: "8 min",
+        done: false,
+      },
+      {
+        title: "Lower/upper bound and STL utilities",
+        readTime: "7 min",
+        done: false,
+      },
+      {
+        title: "Practice: sorting-related problems",
+        readTime: "11 min",
+        done: false,
+      },
     ],
     questions: [
-      { text: "Why is quicksort average-case fast but worst-case bad?", done: false },
-      { text: "How does binary search apply to non-sorted problems?", done: false },
+      {
+        text: "Why is quicksort average-case fast but worst-case bad?",
+        done: false,
+      },
+      {
+        text: "How does binary search apply to non-sorted problems?",
+        done: false,
+      },
     ],
   },
   {
     title: "Section 8 — Dynamic Programming & Problem Solving",
+    readTime: "65 min",
     chapters: [
       {
         title: "DP fundamentals: memoization vs tabulation",
         readTime: "9 min",
         done: false,
       },
-      { title: "0/1 Knapsack and common DP patterns", readTime: "11 min", done: false },
-      { title: "DP on sequences: LIS and edit distance", readTime: "12 min", done: false },
-      { title: "Greedy vs DP: when to choose which", readTime: "8 min", done: false },
-      { title: "Practice contest: timed problem set", readTime: "15 min", done: false },
+      {
+        title: "0/1 Knapsack and common DP patterns",
+        readTime: "11 min",
+        done: false,
+      },
+      {
+        title: "DP on sequences: LIS and edit distance",
+        readTime: "12 min",
+        done: false,
+      },
+      {
+        title: "Greedy vs DP: when to choose which",
+        readTime: "8 min",
+        done: false,
+      },
+      {
+        title: "Practice contest: timed problem set",
+        readTime: "15 min",
+        done: false,
+      },
       {
         title: "Capstone: end-to-end problem solving strategy",
         readTime: "10 min",
@@ -353,8 +660,14 @@ export const courseSections = [
       },
     ],
     questions: [
-      { text: "How do you decide the state and transition for a DP solution?", done: false },
-      { text: "Give an example where greedy fails but DP succeeds.", done: false },
+      {
+        text: "How do you decide the state and transition for a DP solution?",
+        done: false,
+      },
+      {
+        text: "Give an example where greedy fails but DP succeeds.",
+        done: false,
+      },
     ],
   },
 ];

@@ -13,11 +13,5 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div className="min-h-screen w-full font-geist">
-      <CourseNavbar />
-      {children}
-      <Footer />
-    </div>
-  );
+  return <div>{children};</div>;
 }
