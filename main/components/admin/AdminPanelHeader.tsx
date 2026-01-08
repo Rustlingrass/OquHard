@@ -2,7 +2,8 @@ import { JSX } from "react";
 import Breadnav from "../course/Breadnav";
 import { BreadPath } from "@/lib/types";
 import { NativeSelect, NativeSelectOption } from "../ui/native-select";
-import { Plus, Search } from "lucide-react";
+import { Search, FileText, Plus } from "lucide-react";
+import Link from "next/link";
 
 const paths: BreadPath[] = [
   {
@@ -56,13 +57,15 @@ function FileSearch() {
 
 function CreateNewSectionChapter() {
   return (
-    <button
-      type="submit"
-      className=" flex items-center gap-1.5 lg:gap-2 justify-center rounded-sm px-4 lg:px-6 py-2.5 lg:py-2.5 text-sm lg:text-sm font-medium bg-emerald-500 hover:bg-emerald-500/90 active:bg-emerald-500/90 transition-colors text-white cursor-pointer"
-    >
-      <Plus className="size-4 shrink-0" />
-      New
-    </button>
+    <Link href="/admin/chapters/new">
+      <button
+        type="button"
+        className="flex items-center gap-1.5 lg:gap-2 justify-center rounded-sm px-4 lg:px-6 py-2.5 lg:py-2.5 text-sm lg:text-sm font-medium bg-emerald-500 hover:bg-emerald-500/90 active:bg-emerald-500/90 transition-colors text-white cursor-pointer"
+      >
+        <Plus className="size-4 shrink-0" />
+        New
+      </button>
+    </Link>
   );
 }
 

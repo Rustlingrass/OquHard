@@ -202,7 +202,7 @@ const editedSections = courseSections.map((item, index) => ({
 
 export default function MainFileSection() {
   return (
-    <section className="px-6 pt-6 lg:px-0">
+    <section className="px-6 pt-6 lg:px-0 w-full justify-self-stretch">
       <div className="rounded-md lg:rounded-lg border bg-white border-neutral-200 lg:space-y-10 px-6 py-6 lg:px-10 lg:py-10 w-full">
         <div className="hidden lg:block">
           <AdminPanelHeader />
@@ -241,8 +241,8 @@ function FileOptionButton({
 
 function SuggestedFolders() {
   return (
-    <div className="flex gap-8 lg:gap-6 flex-col lg:flex-row">
-      {editedSections.slice(0, 4).map((item, index) => (
+    <div className="flex gap-8 lg:gap-6 flex-col lg:flex-row lg:flex-wrap">
+      {editedSections.slice(0, 3).map((item, index) => (
         <div key={index} className="group lg:flex-1/4">
           <div className="flex items-center justify-center rounded-sm bg-neutral-100 min-h-40">
             <FolderEmerald className="size-24 lg:size-22 object-contain saturate-105 hue-rotate-5 drop-shadow-md" />

@@ -24,14 +24,7 @@ export default function ClientLink({
   const router = useRouter();
 
   useEffect(() => {
-    let cancelled = false;
-    const poll = () => {
-      if (!cancelled) router.prefetch(href, { onInvalidate: poll });
-    };
-    poll();
-    return () => {
-      cancelled = true;
-    };
+    router.prefetch(href);
   }, [href, router]);
   return (
     <a
