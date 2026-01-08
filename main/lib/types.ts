@@ -4,6 +4,17 @@ export type BreadPath = {
   active: boolean;
 };
 
+export type FileResourceType = {
+  fileName: string;
+  fileType: string;
+  fileExtension: string;
+  owner: string;
+  uploadDate: string;
+  fileSize: string;
+  courseSectionId: number;
+  courseChapterId: number;
+};
+
 export type CourseInfoSectionType = {
   title: string;
   chapters: CourseInfoChapterType[];

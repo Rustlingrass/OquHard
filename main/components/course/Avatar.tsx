@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import evil from "@/assets/images/evil.jpg";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export function AvatarImage({ className }: { className?: string }) {
   return (
@@ -31,7 +32,7 @@ export function AvatarMenu({ className }: { className?: string }) {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="rounded-sm mr-2">
         <DropdownMenuItem className="text-xs px-3 py-2">
-          Profile
+          <Link href={"/profile"}>Profile</Link>
         </DropdownMenuItem>
         <DropdownMenuItem className="text-xs px-3 py-2">
           Log Out
@@ -59,7 +60,7 @@ export function ProfileAvatarMenu({ className }: { className?: string }) {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="rounded-sm ml-4 mt-1 min-w-39">
         <DropdownMenuItem className="text-xs px-3 py-2">
-          Profile
+          <Link href={"/profile"}>Profile</Link>
         </DropdownMenuItem>
         <DropdownMenuItem className="text-xs px-3 py-2">
           Log Out

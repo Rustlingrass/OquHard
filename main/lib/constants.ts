@@ -671,3 +671,86 @@ export const courseSections = [
     ],
   },
 ];
+
+export const courseFiles = [
+  {
+    fileName: "cpp_toolchain_setup_guide",
+    fileType: "text document",
+    fileExtension: "pdf",
+    owner: "Emily Davis",
+    uploadDate: "2024-05-28",
+    fileSize: "2.4 MB",
+    courseSectionId: 0, // Section 1
+    courseChapterId: 0, // Course overview and setup
+  },
+  {
+    fileName: "array_visualizer_demo",
+    fileType: "video",
+    fileExtension: "mp4",
+    owner: "Me",
+    uploadDate: "2024-05-27",
+    fileSize: "45.8 MB",
+    courseSectionId: 1, // Section 2
+    courseChapterId: 0, // Static and dynamic arrays
+  },
+  {
+    fileName: "sliding_window_cheatsheet",
+    fileType: "markdown",
+    fileExtension: "md",
+    owner: "Me",
+    uploadDate: "2024-05-26",
+    fileSize: "12 KB",
+    courseSectionId: 1, // Section 2
+    courseChapterId: 3, // Sliding window patterns
+  },
+  {
+    fileName: "linked_list_diagrams",
+    fileType: "image",
+    fileExtension: "jpg",
+    owner: "Me",
+    uploadDate: "2024-05-25",
+    fileSize: "1.2 MB",
+    courseSectionId: 2, // Section 3
+    courseChapterId: 0, // Singly and doubly linked lists
+  },
+  {
+    fileName: "stack_vs_queue_comparison",
+    fileType: "presentation",
+    fileExtension: "pptx",
+    owner: "Emily Davis",
+    uploadDate: "2024-05-24",
+    fileSize: "8.5 MB",
+    courseSectionId: 3, // Section 4
+    courseChapterId: 0, // Stack ADT and application
+  },
+  {
+    fileName: "graph_traversal_examples",
+    fileType: "archive",
+    fileExtension: "zip",
+    owner: "Me",
+    uploadDate: "2024-05-23",
+    fileSize: "15.2 MB",
+    courseSectionId: 5, // Section 6
+    courseChapterId: 2, // DFS, backtracking
+  },
+  {
+    fileName: "sorting_complexity_table",
+    fileType: "text document",
+    fileExtension: "docx",
+    owner: "Me",
+    uploadDate: "2024-05-22",
+    fileSize: "850 KB",
+    courseSectionId: 6, // Section 7
+    courseChapterId: 0, // Complexity analysis
+  },
+  {
+    fileName: "dp_state_transitions_notes",
+    fileType: "markdown",
+    fileExtension: "md",
+    owner: "Me",
+    uploadDate: "2024-05-21",
+    fileSize: "18 KB",
+    courseSectionId: 7, // Section 8
+    courseChapterId: 0, // DP fundamentals
+  },
+];

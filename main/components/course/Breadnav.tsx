@@ -7,11 +7,18 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { BreadPath } from "@/lib/types";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export default function Breadnav({ paths }: { paths: BreadPath[] }) {
+export default function Breadnav({
+  paths,
+  className,
+}: {
+  paths: BreadPath[];
+  className?: string;
+}) {
   return (
-    <Breadcrumb className="px-[25px]">
+    <Breadcrumb className={cn("px-[25px]", className)}>
       <BreadcrumbList>
         {paths.map((item, index) =>
           item.active ? (

@@ -16,3 +16,7 @@ export const getUniqueByAttribute = (arr: any[], attribute: string) => {
     return true;
   });
 };
+
+export function capitalizeFirstLetter(string: string): string {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}

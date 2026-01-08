@@ -14,7 +14,7 @@ export default function Navbar({ className }: { className?: string }) {
     <nav className="w-full bg-white font-geist border-b-[1.5px] border-b-neutral-200/80 sticky top-0 z-50">
       <div
         className={cn(
-          "w-full flex items-center justify-between px-6 pr-4 py-3 lg:py-4 max-w-[1230px] lg:mx-auto",
+          "w-full flex items-center justify-between px-6 pr-4 py-3 lg:py-3 max-w-[1230px] lg:mx-auto",
           className
         )}
       >
