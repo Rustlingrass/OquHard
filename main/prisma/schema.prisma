@@ -14,44 +14,88 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  posts Post[]
-  access Int //Here we will regulate admin and student status
+  id            String    @id @default(uuid())
+  email         String    @unique
+  name          String
+  role          String    @default("user")
+  emailVerified Boolean   @default(false)
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  sessions      Session[]
+  accounts      Account[]
+
+  @@map("user")
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User    @relation(fields: [authorId], references: [id])
-  authorId  Int
-}
-<<<<<<< HEAD
+
 model Module {
-  id Int @id @default(autoincrement())
-  title String
+  id     Int     @id @default(autoincrement())
+  title  String
   topics Topic[]
 }
+
 model Topic {
-  id Int @id @default(autoincrement())
-  module Module @relation(fields: [moduleId], references: [id])
-  moduleId Int
-  title String
-  content String?
+  id        Int        @id @default(autoincrement())
+  module    Module     @relation(fields: [moduleId], references: [id])
+  moduleId  Int
+  title     String
+  content   String?
   videolink String?
   practices Practice[]
 }
 
 model Practice {
-  id Int @id @default(autoincrement())
-  topic Topic @relation(fields: [topicId], references: [id])
+  id      Int     @id @default(autoincrement())
+  topic   Topic   @relation(fields: [topicId], references: [id])
   topicId Int
   content String?
 }
 
-//How will we store presentations?
-=======
->>>>>>> 91d8310 (ui changes)
+model Session {
+  id        String   @id
+  expiresAt DateTime
+  token     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([token])
+  @@index([userId])
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@index([userId])
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([identifier])
+  @@map("verification")
+}

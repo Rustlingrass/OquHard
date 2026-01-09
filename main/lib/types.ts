@@ -1,3 +1,5 @@
+import * as z from "zod";
+
 export type BreadPath = {
   path: string;
   link: string;
@@ -33,7 +35,7 @@ export type CourseInfoSectionQuestionType = {
   done: boolean;
 };
 
-export type UserType = "teacher" | "moderator" | "student";
+export type UserRoleType = "teacher" | "moderator" | "student";
 
 export interface CommentReply {
   id: string;
@@ -58,3 +60,45 @@ export interface Comment {
   replies: number;
   replyList?: CommentReply[]; // Added nested replies array
 }
+
+export const SignUpDataSchema = z.object({
+  name: z.string({ error: "Invalid name" }).max(50),
+  email: z.email({ error: "Invalid email" }),
+  password: z
+    .string()
+    .min(8, { error: "Must be at leat 8 characters" })
+    .max(40, { error: "Must be at most 40 characters long" })
+    .refine((password) => /[A-Z]/.test(password), {
+      error: "Must contain at least one uppercase letter",
+    })
+    .refine((password) => /[a-z]/.test(password), {
+      error: "Must contain at least one lowercase letter",
+    })
+    .refine((password) => /[0-9]/.test(password), {
+      error: "Must contain at least one number",
+    })
+    .refine((password) => /[!@#$%^&*]/.test(password), {
+      error: "Must contain at least one special character (!@#$%^&*)",
+    }),
+});
+
+export const LogInDataSchema = z.object({
+  email: z.email({ error: "Invalid email" }),
+  password: z.string({ error: "Invalid password" }),
+});
+
+export type SignUpDataType = z.infer<typeof SignUpDataSchema>;
+export type LogInDataType = z.infer<typeof LogInDataSchema>;
+
+export const UserSchema = z.object({
+  id: z.string(),
+  createdAt: z.date(),
+  updatedAt: z.date(),
+  email: z.email(),
+  emailVerified: z.boolean(),
+  name: z.string(),
+  role: z.string().default("user").optional(),
+  image: z.union([z.string(), z.null()]).optional(),
+});
+
+export type UserType = z.infer<typeof UserSchema>;
